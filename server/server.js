@@ -17,7 +17,7 @@ app.use(bodyParser.json())
 //Configuracion global de rutas
 app.use(require('./routes/index'));
 // habilitar la carpeta public
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 
 try {
     mongoose.connect(process.env.URLDB, { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false }, (err, res) => {
